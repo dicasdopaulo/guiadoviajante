@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Small Talk | Guia de Viagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .pronunciation-text { 
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .english-text {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .portuguese-text {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .dialogue-person1 {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 4px solid #6366f1;
+        }
+        .dialogue-person2 {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .error-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #ef4444;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .icon-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-8px); }
+            70% { transform: translateY(-4px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-between mb-6">
+                <a href="/guiadoviajante/" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2">
+                    <span>←</span>
+                    <span>Voltar ao Início</span>
+                </a>
+                <div class="text-right">
+                    <div class="text-sm opacity-75">Capítulo</div>
+                    <div class="text-2xl font-bold">2/15</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="floating-element mb-6">
+                    <div class="text-6xl mb-4">💬</div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Chapter 2 – Small Talk</h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-6">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+        
+        <!-- Keywords Section -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">📌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Palavras-chave</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇺🇸 Inglês</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇧🇷 Equivalência natural</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🗣️ Pronúncia (BR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="space-y-2">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Small talk</td>
+                            <td class="py-3 px-4">Conversa leve / papo furado</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"smól tók"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Weather</td>
+                            <td class="py-3 px-4">Tempo / clima</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"uédãr"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Vacation</td>
+                            <td class="py-3 px-4">Férias</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"vêikêichân"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Work / Job</td>
+                            <td class="py-3 px-4">Trabalho / profissão</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"uârk / djób"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Family</td>
+                            <td class="py-3 px-4">Família</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"fêmili"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Where are you staying?</td>
+                            <td class="py-3 px-4">Onde você está hospedado?</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"uéar ar iú stêin?"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Trip</td>
+                            <td class="py-3 px-4">Viagem</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"tríp"</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">First time</td>
+                            <td class="py-3 px-4">Primeira vez</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"fârst táim"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Useful Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🗣️</div>
+                <h2 class="text-3xl font-bold text-gray-800">Expressões úteis</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">How's your day going?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Como tá seu dia?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"rráuz iór déi góuin?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm just walking around.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Só tô dando uma volta.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim djâst uókin aráund"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Is this your first time here?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">É sua primeira vez aqui?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"iz dís iór fârst táim rríer?"</div>
+                    </div>
+                    <div class="flex items-center justify-center space-x-1">
+                        <span class="text-2xl">👄</span>
+                        <span class="text-2xl">🎧</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm here on vacation.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Tô de férias.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim rríer ón vêikêichân"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm staying near the beach.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Tô hospedado perto da praia.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim stêin niâr dâ bítch"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">What do you do?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Você trabalha com o quê?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uót du iú dú?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">🎧</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm a student.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Sou estudante.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim a stúdânt"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Dialogue -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎭</div>
+                <h2 class="text-3xl font-bold text-gray-800">Mini-diálogo</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Hi! How's your day going? <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Oi! Como tá seu dia?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">Pretty good. Just walking around. <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Tranquilo. Só tô dando uma volta.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Is this your first time here? <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>É sua primeira vez aqui?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">Yes. I'm here on vacation. <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>É sim. Tô de férias.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Cool! Enjoy! <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Que massa! Aproveita!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4 icon-bounce">⚡</div>
+                <h2 class="text-3xl font-bold text-gray-800">Flash Expressions</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200">
+                    <div class="font-semibold text-purple-700 mb-2">Just chilling <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Tô só de boa / Relaxando</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"djâst tchílin"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+                    <div class="font-semibold text-blue-700 mb-2">I'm not from here <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Não sou daqui</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"aim nót frôm rríer"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 md:col-span-2">
+                    <div class="font-semibold text-green-700 mb-2">What brings you here? <span class="text-xl">🎧</span></div>
+                    <div class="text-gray-600 mb-2">O que te trouxe por aqui?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"uót bríngz iú rríer?"</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Error -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">❌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Erro clássico</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="error-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">❌</span>
+                        <span class="font-semibold text-red-700">"I'm in vacation"</span>
+                    </div>
+                </div>
+                
+                <div class="success-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">✅</span>
+                        <span class="font-semibold text-green-700">"I'm on vacation"</span>
+                    </div>
+                </div>
+                
+                <div class="tip-box p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-2xl">⚠️</span>
+                        <div class="text-sky-700">
+                            <strong>Em inglês, usa-se "on" para férias – diferente do português!</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Tip -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">✅</div>
+                <h2 class="text-3xl font-bold text-gray-800">Dica de ouro</h2>
+            </div>
+            
+            <div class="tip-box p-6 rounded-xl">
+                <div class="mb-4">
+                    <div class="font-semibold text-sky-700 mb-2">Quer puxar papo sem parecer invasivo? Pergunte:</div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg border-2 border-sky-200 mb-4">
+                    <div class="font-bold text-lg text-sky-800 mb-2">"Are you here on vacation or business?"</div>
+                    <div class="text-gray-600 mb-2">Você tá aqui de férias ou a trabalho?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">Pronúncia: "ár iú ríer ón vêikêichân ór bízness?" <span class="text-xl">👄</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pocket Summary -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎒</div>
+                <h2 class="text-3xl font-bold text-gray-800">Resumo de bolso</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗝️</span>
+                            <span class="font-bold text-orange-700">3 palavras-chave:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700">
+                            <div><strong>Vacation</strong> = Férias</div>
+                            <div><strong>Trip</strong> = Viagem</div>
+                            <div><strong>Weather</strong> = Tempo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗣️</span>
+                            <span class="font-bold text-green-700">3 frases essenciais:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700 text-sm">
+                            <div>"Is this your first time here?"</div>
+                            <div>"I'm just walking around."</div>
+                            <div>"What do you do?"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+                <div class="flex items-start space-x-3">
+                    <span class="text-2xl">✅</span>
+                    <div class="text-blue-700">
+                        <strong>Use "Are you here on vacation or business?" para parecer sociável sem invadir o espaço do outro.</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8">
+            <a href="/guiadoviajante/chapter1.html" class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold text-gray-700 transition-colors flex items-center space-x-2">
+                <span>←</span>
+                <span>Capítulo 1</span>
+            </a>
+            
+            <div class="text-center">
+                <div class="text-sm text-gray-500 mb-1">Próximo capítulo</div>
+                <div class="font-semibold text-gray-700">Passport & Documents</div>
+            </div>
+            
+            <a href="/guiadoviajante/chapter3.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors flex items-center space-x-2">
+                <span>Capítulo 3</span>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="gradient-bg text-white py-12 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="text-4xl mb-4">💬</div>
+                <h3 class="text-2xl font-bold mb-2">Parabéns!</h3>
+                <p class="text-lg opacity-90">Você completou o Capítulo 2. Agora você sabe como puxar papo em inglês!</p>
+            </div>
+            <div class="text-sm opacity-70">
+                <p>Continue praticando e boa sorte na sua viagem! 🌟</p>
+            </div>
+        </div>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0e67ce3285680',t:'MTc1NzM2MDI0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
