@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 - Shopping & Buying Things | Guia de Viagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .pronunciation-text { 
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .english-text {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .portuguese-text {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .dialogue-person1 {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 4px solid #6366f1;
+        }
+        .dialogue-person2 {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .error-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #ef4444;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .icon-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-8px); }
+            70% { transform: translateY(-4px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-between mb-6">
+                <a href="/guiadoviajante/index.html" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2">
+                    <span>←</span>
+                    <span>Voltar ao Início</span>
+                </a>
+                <div class="text-right">
+                    <div class="text-sm opacity-75">Capítulo</div>
+                    <div class="text-2xl font-bold">10/15</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="floating-element mb-6">
+                    <div class="text-6xl mb-4">🛍️</div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Chapter 10 – Shopping & Buying Things</h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-6">Comprando sem drama: roupas, lembrancinhas ou eletrônicos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+        
+        <!-- Keywords Section -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">📌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Palavras-chave</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇺🇸 Inglês</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇧🇷 Equivalência natural</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🗣️ Pronúncia (BR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="space-y-2">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Store / Shop</td>
+                            <td class="py-3 px-4">Loja</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"stór / shóp"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Mall / Shopping mall</td>
+                            <td class="py-3 px-4">Shopping</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"mól / shópín mól"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Size</td>
+                            <td class="py-3 px-4">Tamanho</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"sáiz"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Price</td>
+                            <td class="py-3 px-4">Preço</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"práis"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Discount</td>
+                            <td class="py-3 px-4">Desconto</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"dískáunt"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Cash / Credit card</td>
+                            <td class="py-3 px-4">Dinheiro / Cartão de crédito</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"késh / crédît cárd"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Receipt</td>
+                            <td class="py-3 px-4">Nota fiscal / Comprovante</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"rissít"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Try on</td>
+                            <td class="py-3 px-4">Provar (roupa)</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"trái ón"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Fitting room</td>
+                            <td class="py-3 px-4">Provador</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"fírin rúm"</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Gift / Souvenir</td>
+                            <td class="py-3 px-4">Presente / Lembrança</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"guíft / súvenír"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Useful Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🗣️</div>
+                <h2 class="text-3xl font-bold text-gray-800">Expressões úteis</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">"I'm just looking, thanks."</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">"Só tô dando uma olhadinha, obrigado."</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"áim djâst lúkin, ténks"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">How much is this?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Quanto custa isso?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"rráu mãtch iz dís?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Do you have this in a smaller size?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Tem esse em tamanho menor?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"du iú rrév dís in â smóler sáiz?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Can I try this on?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Posso experimentar?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"kén ai trái dís ón?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Where is the fitting room?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Onde fica o provador?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uéar iz dâ fírin rúm?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Do you accept credit cards?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Aceita cartão de crédito?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"du iú ákcépt crédît cárdz?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Dialogue -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎭</div>
+                <h2 class="text-3xl font-bold text-gray-800">Mini-diálogo – Comprando roupa</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">Hi! Can I help you? <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Oi! Posso te ajudar?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">I'm just looking, thanks. <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Só tô dando uma olhadinha, obrigado.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">Let me know if you need anything. <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Me avisa se precisar de algo.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Sure! Oh, how much is this jacket? <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Claro! Ah, quanto custa essa jaqueta?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">It's on sale. Only $40. <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Está em promoção. Só 40 dólares.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4 icon-bounce">⚡</div>
+                <h2 class="text-3xl font-bold text-gray-800">Flash Expressions</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200">
+                    <div class="font-semibold text-purple-700 mb-2">It's on sale <span class="text-xl">🎧</span></div>
+                    <div class="text-gray-600 mb-2">Tá na promoção</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"its ôn sêiãl"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+                    <div class="font-semibold text-blue-700 mb-2">Do you have this in black? <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Tem desse em preto?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"du iú rrév dís in blék?"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 md:col-span-2">
+                    <div class="font-semibold text-red-700 mb-2">I'll take it <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Vou levar</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"áil têik it"</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Error -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">❌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Erro clássico</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="error-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">❌</span>
+                        <span class="font-semibold text-red-700">"I want to prove this."</span>
+                    </div>
+                </div>
+                
+                <div class="success-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">✅</span>
+                        <span class="font-semibold text-green-700">"I want to try this on."</span>
+                    </div>
+                </div>
+                
+                <div class="tip-box p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-2xl">⚠️</span>
+                        <div class="text-sky-700">
+                            <strong>"Prove" é provar comida! Pra roupas, o verbo é try on.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Tip -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">✅</div>
+                <h2 class="text-3xl font-bold text-gray-800">Dica de ouro</h2>
+            </div>
+            
+            <div class="tip-box p-6 rounded-xl">
+                <div class="mb-4">
+                    <div class="font-semibold text-sky-700 mb-2">Pra evitar confusão na hora de pagar, pergunte:</div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg border-2 border-sky-200 mb-4">
+                    <div class="font-bold text-lg text-sky-800 mb-2">"Is tax included in the price?"</div>
+                    <div class="text-gray-600 mb-2">O imposto já está incluso no preço?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">Pronúncia: "iz táks inclúdêd in dâ práis?" <span class="text-xl">✅</span><span class="text-xl">👄</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pocket Summary -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎒</div>
+                <h2 class="text-3xl font-bold text-gray-800">Resumo de bolso</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗝️</span>
+                            <span class="font-bold text-orange-700">3 palavras-chave:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700">
+                            <div><strong>Size</strong> = Tamanho</div>
+                            <div><strong>Discount</strong> = Desconto</div>
+                            <div><strong>Try on</strong> = Experimentar</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗣️</span>
+                            <span class="font-bold text-green-700">3 frases essenciais:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700 text-sm">
+                            <div>"How much is this?"</div>
+                            <div>"Can I try this on?"</div>
+                            <div>"Do you accept credit cards?"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+                <div class="flex items-start space-x-3">
+                    <span class="text-2xl">✅</span>
+                    <div class="text-blue-700">
+                        <strong>Lembre-se: nos EUA, o preço na etiqueta quase nunca inclui os impostos! Confirme com o atendente antes de pagar.</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8">
+            <a href="/guiadoviajante/chapter9.html" class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold text-gray-700 transition-colors flex items-center space-x-2">
+                <span>←</span>
+                <span>Capítulo 9</span>
+            </a>
+            
+            <div class="text-center">
+                <div class="text-sm text-gray-500 mb-1">Próximo capítulo</div>
+                <div class="font-semibold text-gray-700">Emergências & Problemas</div>
+            </div>
+            
+            <a href="/guiadoviajante/chapter11.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors flex items-center space-x-2">
+                <span>Capítulo 11</span>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="gradient-bg text-white py-12 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="text-4xl mb-4">🛍️</div>
+                <h3 class="text-2xl font-bold mb-2">Parabéns!</h3>
+                <p class="text-lg opacity-90">Você completou o Capítulo 10. Agora você sabe fazer compras em inglês!</p>
+            </div>
+            <div class="text-sm opacity-70">
+                <p>Continue praticando e boa sorte na sua viagem! 🌟</p>
+            </div>
+        </div>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c14376d70f5680',t:'MTc1NzM2NDA1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
