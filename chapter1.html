@@ -22,12 +22,23 @@
     <div class="gradient-bg text-white py-8">
         <div class="max-w-4xl mx-auto px-6">
             <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
-            <h2 class="text-2xl font-medium mb-4">Chapter 1 – Greetings & Introducing Yourself</h2>
-            <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
+            <div class="flex flex-wrap gap-4 mb-4">
+                <button onclick="showChapter(1)" id="chapter1-btn" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 font-medium">
+                    Chapter 1 – Greetings
+                </button>
+                <button onclick="showChapter(2)" id="chapter2-btn" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 font-medium">
+                    Chapter 2 – Small Talk
+                </button>
+            </div>
+            <div id="chapter-description">
+                <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
+            </div>
         </div>
     </div>
 
     <div class="max-w-4xl mx-auto px-6 py-8 space-y-8">
+        <!-- Chapter 1 Content -->
+        <div id="chapter1-content">
         <!-- Palavras-chave -->
         <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
             <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
@@ -320,6 +331,281 @@
                 </p>
             </div>
         </div>
+        </div>
+
+        <!-- Chapter 2 Content -->
+        <div id="chapter2-content" style="display: none;">
+        <!-- Palavras-chave Chapter 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                📌 Palavras-chave
+            </h3>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇺🇸 Inglês</th>
+                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇧🇷 Equivalência</th>
+                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🗣️ Pronúncia</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Small talk</td>
+                            <td class="py-3 px-2">Conversa leve / papo furado</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">smól tók</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Weather</td>
+                            <td class="py-3 px-2">Tempo / clima</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uédãr</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Vacation</td>
+                            <td class="py-3 px-2">Férias</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">vêikêichân</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Work / Job</td>
+                            <td class="py-3 px-2">Trabalho / profissão</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uârk / djób</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Family</td>
+                            <td class="py-3 px-2">Família</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">fêmili</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Where are you staying?</td>
+                            <td class="py-3 px-2">Onde você está hospedado?</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uéar ar iú stêin?</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">Trip</td>
+                            <td class="py-3 px-2">Viagem</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">tríp</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-2 font-medium text-blue-600">First time</td>
+                            <td class="py-3 px-2">Primeira vez</td>
+                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">fârst táim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Expressões úteis Chapter 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                🗣️ Expressões úteis
+            </h3>
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-blue-700">How's your day going?</span>
+                        <span class="text-sm text-gray-600">Como tá seu dia?</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">rráuz iór déi góuin?</div>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-green-700">I'm just walking around.</span>
+                        <span class="text-sm text-gray-600">Só tô dando uma volta.</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim djâst uókin aráund</div>
+                </div>
+
+                <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-purple-700">Is this your first time here?</span>
+                        <span class="text-sm text-gray-600">É sua primeira vez aqui?</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">iz dís iór fârst táim rríer?</div>
+                </div>
+
+                <div class="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-orange-700">I'm here on vacation.</span>
+                        <span class="text-sm text-gray-600">Tô de férias.</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim rríer ón vêikêichân</div>
+                </div>
+
+                <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-red-700">I'm staying near the beach.</span>
+                        <span class="text-sm text-gray-600">Tô hospedado perto da praia.</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim stêin niâr dâ bítch</div>
+                </div>
+
+                <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-yellow-700">What do you do?</span>
+                        <span class="text-sm text-gray-600">Você trabalha com o quê?</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">uót du iú dú?</div>
+                </div>
+
+                <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="font-semibold text-indigo-700">I'm a student.</span>
+                        <span class="text-sm text-gray-600">Sou estudante.</span>
+                    </div>
+                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim a stúdânt</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini-diálogo Chapter 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                🎭 Mini-diálogo
+            </h3>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 rounded-full p-2">👤</div>
+                    <div class="flex-1">
+                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
+                            <span class="font-medium text-blue-800">Hi! How's your day going?</span>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-3">Oi! Como tá seu dia?</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 rounded-full p-2">🧍</div>
+                    <div class="flex-1">
+                        <div class="bg-green-50 rounded-lg p-3 mb-1">
+                            <span class="font-medium text-green-800">Pretty good. Just walking around.</span>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-3">Tranquilo. Só tô dando uma volta.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 rounded-full p-2">👤</div>
+                    <div class="flex-1">
+                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
+                            <span class="font-medium text-blue-800">Is this your first time here?</span>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-3">É sua primeira vez aqui?</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 rounded-full p-2">🧍</div>
+                    <div class="flex-1">
+                        <div class="bg-green-50 rounded-lg p-3 mb-1">
+                            <span class="font-medium text-green-800">Yes. I'm here on vacation.</span>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-3">É sim. Tô de férias.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 rounded-full p-2">👤</div>
+                    <div class="flex-1">
+                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
+                            <span class="font-medium text-blue-800">Cool! Enjoy!</span>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-3">Que massa! Aproveita!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flash Expressions Chapter 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                ⚡ Flash Expressions
+            </h3>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg p-4 text-white">
+                    <div class="font-bold mb-2">Just chilling</div>
+                    <div class="text-sm opacity-90 mb-2">Tô só de boa / Relaxando</div>
+                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">djâst tchílin</div>
+                </div>
+                <div class="bg-gradient-to-r from-green-400 to-teal-500 rounded-lg p-4 text-white">
+                    <div class="font-bold mb-2">I'm not from here</div>
+                    <div class="text-sm opacity-90 mb-2">Não sou daqui</div>
+                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">aim nót frôm rríer</div>
+                </div>
+                <div class="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-4 text-white">
+                    <div class="font-bold mb-2">What brings you here?</div>
+                    <div class="text-sm opacity-90 mb-2">O que te trouxe por aqui?</div>
+                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">uót bríngz iú rríer?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Erro clássico Chapter 2 -->
+        <div class="bg-red-50 border border-red-200 rounded-xl p-6 card-hover">
+            <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
+                ❌ Erro clássico
+            </h3>
+            <div class="space-y-3">
+                <div class="bg-red-100 rounded-lg p-3 border-l-4 border-red-400">
+                    <span class="text-red-700 font-medium">❌ "I'm in vacation"</span>
+                </div>
+                <div class="bg-green-100 rounded-lg p-3 border-l-4 border-green-400">
+                    <span class="text-green-700 font-medium">✅ "I'm on vacation"</span>
+                </div>
+                <div class="bg-yellow-100 rounded-lg p-3 border-l-4 border-yellow-400">
+                    <span class="text-yellow-700">⚠️ Em inglês, usa-se "on" para férias – diferente do português!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dica de ouro Chapter 2 -->
+        <div class="bg-gradient-to-r from-emerald-400 to-teal-600 rounded-xl p-6 text-white card-hover">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                ✅ Dica de ouro
+            </h3>
+            <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                <p class="mb-3">Quer puxar papo sem parecer invasivo? Pergunte:</p>
+                <div class="bg-white bg-opacity-30 rounded-lg p-3 mb-2">
+                    <span class="font-bold text-lg">"Are you here on vacation or business?"</span>
+                </div>
+                <div class="text-sm opacity-90 mb-2">Você tá aqui de férias ou a trabalho?</div>
+                <div class="text-sm font-mono bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
+                    Pronúncia: "ár iú ríer ón vêikêichân ór bízness?"
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumo de bolso Chapter 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                🎒 Resumo de bolso
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-blue-600">🗝️ 3 palavras-chave:</h4>
+                    <ul class="space-y-2">
+                        <li class="bg-blue-50 rounded-lg p-2"><strong>Vacation</strong> = Férias</li>
+                        <li class="bg-blue-50 rounded-lg p-2"><strong>Trip</strong> = Viagem</li>
+                        <li class="bg-blue-50 rounded-lg p-2"><strong>Weather</strong> = Tempo</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-green-600">🗣️ 3 frases essenciais:</h4>
+                    <ul class="space-y-2">
+                        <li class="bg-green-50 rounded-lg p-2">"Is this your first time here?"</li>
+                        <li class="bg-green-50 rounded-lg p-2">"I'm just walking around."</li>
+                        <li class="bg-green-50 rounded-lg p-2">"What do you do?"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                <p class="text-yellow-800">
+                    <strong>✅</strong> Use "Are you here on vacation or business?" para parecer sociável sem invadir o espaço do outro.
+                </p>
+            </div>
+        </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -328,5 +614,36 @@
             <p class="text-lg opacity-90">Bons estudos e boa viagem! 🌟</p>
         </div>
     </div>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c09396e36e5680',t:'MTc1NzM1Njg1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <script>
+        function showChapter(chapterNumber) {
+            // Hide all chapters
+            document.getElementById('chapter1-content').style.display = 'none';
+            document.getElementById('chapter2-content').style.display = 'none';
+            
+            // Remove active state from all buttons
+            document.getElementById('chapter1-btn').classList.remove('bg-white', 'bg-opacity-40', 'font-bold');
+            document.getElementById('chapter2-btn').classList.remove('bg-white', 'bg-opacity-40', 'font-bold');
+            
+            // Show selected chapter and update button state
+            if (chapterNumber === 1) {
+                document.getElementById('chapter1-content').style.display = 'block';
+                document.getElementById('chapter1-btn').classList.add('bg-white', 'bg-opacity-40', 'font-bold');
+                document.getElementById('chapter-description').innerHTML = '<p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>';
+            } else if (chapterNumber === 2) {
+                document.getElementById('chapter2-content').style.display = 'block';
+                document.getElementById('chapter2-btn').classList.add('bg-white', 'bg-opacity-40', 'font-bold');
+                document.getElementById('chapter-description').innerHTML = '<p class="text-lg opacity-90">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>';
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Initialize with Chapter 1
+        document.addEventListener('DOMContentLoaded', function() {
+            showChapter(1);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0bc2c83735680',t:'MTc1NzM1ODUxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
