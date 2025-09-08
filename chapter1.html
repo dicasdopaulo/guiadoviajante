@@ -3,647 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Viagem - Inglês Básico</title>
+    <title>Chapter 1 - Basic Greetings | Guia de Viagem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .pronunciation { background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%); }
-        .audio-btn { transition: all 0.2s ease; }
-        .audio-btn:hover { transform: scale(1.1); }
-        .section-card { backdrop-filter: blur(10px); }
+        .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .pronunciation-text { 
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .english-text {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .portuguese-text {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .dialogue-person1 {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 4px solid #6366f1;
+        }
+        .dialogue-person2 {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .error-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #ef4444;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .icon-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-8px); }
+            70% { transform: translateY(-4px); }
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
     <!-- Header -->
-    <div class="gradient-bg text-white py-8">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
-            <div class="flex flex-wrap gap-4 mb-4">
-                <button onclick="showChapter(1)" id="chapter1-btn" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 font-medium">
-                    Chapter 1 – Greetings
-                </button>
-                <button onclick="showChapter(2)" id="chapter2-btn" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 font-medium">
-                    Chapter 2 – Small Talk
-                </button>
+    <div class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-between mb-6">
+                <a href="/guiadoviajante/index.html" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2">
+                    <span>←</span>
+                    <span>Voltar ao Início</span>
+                </a>
+                <div class="text-right">
+                    <div class="text-sm opacity-75">Capítulo</div>
+                    <div class="text-2xl font-bold">1/15</div>
+                </div>
             </div>
-            <div id="chapter-description">
-                <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
+            
+            <div class="text-center">
+                <div class="floating-element mb-6">
+                    <div class="text-6xl mb-4">👋</div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Chapter 1 – Basic Greetings</h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-6">Cumprimentos básicos para começar qualquer conversa com confiança</p>
             </div>
         </div>
     </div>
 
-    <div class="max-w-4xl mx-auto px-6 py-8 space-y-8">
-        <!-- Chapter 1 Content -->
-        <div id="chapter1-content">
-        <!-- Palavras-chave -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                📌 Palavras-chave
-            </h3>
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+        
+        <!-- Keywords Section -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">📌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Palavras-chave</h2>
+            </div>
+            
             <div class="overflow-x-auto">
                 <table class="w-full">
                     <thead>
                         <tr class="border-b-2 border-gray-200">
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇺🇸 Inglês</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇧🇷 Equivalência</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🗣️ Pronúncia</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇺🇸 Inglês</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇧🇷 Equivalência natural</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🗣️ Pronúncia (BR)</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hello</td>
-                            <td class="py-3 px-2">Oi / Olá</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrélôu</td>
+                    <tbody class="space-y-2">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Hello / Hi</td>
+                            <td class="py-3 px-4">Olá / Oi</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"rrelôu / rrai"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Good morning</td>
+                            <td class="py-3 px-4">Bom dia</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"gud mórnin"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Good afternoon</td>
+                            <td class="py-3 px-4">Boa tarde</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"gud áftârnún"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Good evening</td>
+                            <td class="py-3 px-4">Boa noite</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"gud ívnin"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">How are you?</td>
+                            <td class="py-3 px-4">Como você está?</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"rráu ar iú?"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">I'm fine</td>
+                            <td class="py-3 px-4">Estou bem</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"aim fáin"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Thank you</td>
+                            <td class="py-3 px-4">Obrigado(a)</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"fénk iú"</td>
                         </tr>
                         <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hi</td>
-                            <td class="py-3 px-2">Oi (mais informal)</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrái</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hey</td>
-                            <td class="py-3 px-2">E aí / Opa!</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrêi</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good morning</td>
-                            <td class="py-3 px-2">Bom dia</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud mórnin</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good afternoon</td>
-                            <td class="py-3 px-2">Boa tarde</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud afternún</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good evening</td>
-                            <td class="py-3 px-2">Boa noite (ao chegar)</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud ívnin</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Goodbye</td>
-                            <td class="py-3 px-2">Tchau</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gudbái</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">See you</td>
-                            <td class="py-3 px-2">Até mais</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">sí iú</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Take care</td>
-                            <td class="py-3 px-2">Se cuida</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">teik kér</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">What's your name?</td>
-                            <td class="py-3 px-2">Qual é o seu nome?</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uótch iór neim?</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">My name is…</td>
-                            <td class="py-3 px-2">Meu nome é…</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">mai neim iz...</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Nice to meet you</td>
-                            <td class="py-3 px-2">Prazer em te conhecer</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">náiss tchu mítiú</td>
+                            <td class="py-3 px-4 font-medium text-blue-600">Nice to meet you</td>
+                            <td class="py-3 px-4">Prazer em conhecê-lo</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"náis tu mít iú"</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
 
-        <!-- Expressões úteis -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🗣️ Expressões úteis
-            </h3>
-            <div class="space-y-4">
-                <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-blue-700">How are you?</span>
-                        <span class="text-sm text-gray-600">Tudo bem? / Como vai?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">rráu ar iú?</div>
-                </div>
-                
-                <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-green-700">"I'm fine, thanks."</span>
-                        <span class="text-sm text-gray-600">"Tô bem, valeu."</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim fáin, tênks</div>
-                </div>
-
-                <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-purple-700">And you?</span>
-                        <span class="text-sm text-gray-600">E você?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">ênd iú?</div>
-                </div>
-
-                <div class="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-orange-700">Where are you from?</span>
-                        <span class="text-sm text-gray-600">De onde você é?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">uéar ar iú fróm?</div>
-                </div>
-
-                <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-red-700">I'm from Brazil.</span>
-                        <span class="text-sm text-gray-600">Sou do Brasil.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim frôm brazíl</div>
-                </div>
-
-                <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-yellow-700">I speak a little English.</span>
-                        <span class="text-sm text-gray-600">Eu falo um pouco de inglês.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">ai spík a lírôu inglish</div>
-                </div>
+        <!-- Useful Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🗣️</div>
+                <h2 class="text-3xl font-bold text-gray-800">Expressões úteis</h2>
             </div>
-        </div>
-
-        <!-- Mini-diálogo -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎭 Mini-diálogo
-            </h3>
+            
             <div class="space-y-4">
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Hi! What's your name?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Oi! Qual seu nome?</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Hi there!</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Oi, tudo bem?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"rrai déar!"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">My name is Ana. And you?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Meu nome é Ana. E o seu?</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">How's it going?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Como vai?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"rráuz it góuin?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">🎧</span>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Nice to meet you!</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Prazer!</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm good, thanks!</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Tô bem, obrigado!</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim gud, fénks!"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Nice to meet you too. Where are you from?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Prazer também. De onde você é?</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">What's your name?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Qual é seu nome?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uóts iór nêim?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">🎧</span>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">I'm from Brazil.</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Sou do Brasil.</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">My name is...</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Meu nome é...</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"mái nêim iz..."</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Cool!</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Que legal!</div>
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Where are you from?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">De onde você é?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uéar ar iú frôm?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">🎧</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I'm from Brazil.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Sou do Brasil.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"aim frôm brâzíl"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Mini Dialogue -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎭</div>
+                <h2 class="text-3xl font-bold text-gray-800">Mini-diálogo</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Hi! How are you? <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Oi! Como você está?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">I'm good, thanks! And you? <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Tô bem, obrigado! E você?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">I'm fine. What's your name? <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Estou bem. Qual é seu nome?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">My name is Carlos. Nice to meet you! <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Meu nome é Carlos. Prazer em conhecê-lo!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Nice to meet you too! <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Prazer em conhecê-lo também!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Flash Expressions -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                ⚡ Flash Expressions
-            </h3>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">What's up?</div>
-                    <div class="text-sm opacity-90 mb-2">E aí?</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">uótz âp?</div>
-                </div>
-                <div class="bg-gradient-to-r from-pink-400 to-red-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">How's it going?</div>
-                    <div class="text-sm opacity-90 mb-2">Como estão as coisas?</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">rráuz it góuin?</div>
-                </div>
-                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">It's nice to see you!</div>
-                    <div class="text-sm opacity-90 mb-2">Que bom te ver!</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">its náiss tchú sí iú</div>
-                </div>
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4 icon-bounce">⚡</div>
+                <h2 class="text-3xl font-bold text-gray-800">Flash Expressions</h2>
             </div>
-        </div>
-
-        <!-- Erro clássico -->
-        <div class="bg-red-50 border border-red-200 rounded-xl p-6 card-hover">
-            <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
-                ❌ Erro clássico
-            </h3>
-            <div class="space-y-3">
-                <div class="bg-red-100 rounded-lg p-3 border-l-4 border-red-400">
-                    <span class="text-red-700 font-medium">❌ "I'm call Ana."</span>
-                </div>
-                <div class="bg-green-100 rounded-lg p-3 border-l-4 border-green-400">
-                    <span class="text-green-700 font-medium">✅ "My name is Ana" ou "I'm Ana"</span>
-                </div>
-                <div class="bg-yellow-100 rounded-lg p-3 border-l-4 border-yellow-400">
-                    <span class="text-yellow-700">⚠️ "Call" significa "chamar", então soa errado nessa situação.</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dica de ouro -->
-        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl p-6 text-white card-hover">
-            <h3 class="text-2xl font-bold mb-4 flex items-center">
-                ✅ Dica de ouro
-            </h3>
-            <div class="bg-white bg-opacity-20 rounded-lg p-4">
-                <p class="mb-3">Se travar ou não entender algo, diga:</p>
-                <div class="bg-white bg-opacity-30 rounded-lg p-3 mb-2">
-                    <span class="font-bold text-lg">"Sorry, can you repeat that?"</span>
-                </div>
-                <div class="text-sm opacity-90 mb-2">Desculpa, você pode repetir?</div>
-                <div class="text-sm font-mono bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
-                    Pronúncia: "sóri, kén iú ripít dét?"
-                </div>
-            </div>
-        </div>
-
-        <!-- Resumo de bolso -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎒 Resumo de bolso
-            </h3>
+            
             <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-blue-600">🗝️ 3 palavras-chave:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Hi</strong> = Oi</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Goodbye</strong> = Tchau</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Name</strong> = Nome</li>
-                    </ul>
+                <div class="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200">
+                    <div class="font-semibold text-purple-700 mb-2">Hey! <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Ei! (informal)</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"rréi!"</div>
                 </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-green-600">🗣️ 3 frases essenciais:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-green-50 rounded-lg p-2">"Hi! What's your name?"</li>
-                        <li class="bg-green-50 rounded-lg p-2">"I'm from Brazil."</li>
-                        <li class="bg-green-50 rounded-lg p-2">"Nice to meet you!"</li>
-                    </ul>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+                    <div class="font-semibold text-blue-700 mb-2">What's up? <span class="text-xl">🎧</span></div>
+                    <div class="text-gray-600 mb-2">E aí? / Qual é?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"uóts âp?"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                    <div class="font-semibold text-green-700 mb-2">Not much <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Nada demais</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"nót mâtch"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200">
+                    <div class="font-semibold text-orange-700 mb-2">See you later! <span class="text-xl">👄</span></div>
+                    <div class="text-gray-600 mb-2">Até mais!</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"sí iú lêitâr!"</div>
                 </div>
             </div>
-            <div class="mt-6 bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                <p class="text-yellow-800">
-                    <strong>✅</strong> Use "Sorry, can you repeat that?" quando não entender — funciona em qualquer situação!
-                </p>
-            </div>
-        </div>
-        </div>
+        </section>
 
-        <!-- Chapter 2 Content -->
-        <div id="chapter2-content" style="display: none;">
-        <!-- Palavras-chave Chapter 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                📌 Palavras-chave
-            </h3>
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200">
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇺🇸 Inglês</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇧🇷 Equivalência</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🗣️ Pronúncia</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Small talk</td>
-                            <td class="py-3 px-2">Conversa leve / papo furado</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">smól tók</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Weather</td>
-                            <td class="py-3 px-2">Tempo / clima</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uédãr</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Vacation</td>
-                            <td class="py-3 px-2">Férias</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">vêikêichân</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Work / Job</td>
-                            <td class="py-3 px-2">Trabalho / profissão</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uârk / djób</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Family</td>
-                            <td class="py-3 px-2">Família</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">fêmili</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Where are you staying?</td>
-                            <td class="py-3 px-2">Onde você está hospedado?</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uéar ar iú stêin?</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Trip</td>
-                            <td class="py-3 px-2">Viagem</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">tríp</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">First time</td>
-                            <td class="py-3 px-2">Primeira vez</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">fârst táim</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Common Error -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">❌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Erro clássico</h2>
             </div>
-        </div>
-
-        <!-- Expressões úteis Chapter 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🗣️ Expressões úteis
-            </h3>
+            
             <div class="space-y-4">
-                <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-blue-700">How's your day going?</span>
-                        <span class="text-sm text-gray-600">Como tá seu dia?</span>
+                <div class="error-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">❌</span>
+                        <span class="font-semibold text-red-700">"How do you do?" (como resposta)</span>
                     </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">rráuz iór déi góuin?</div>
                 </div>
                 
-                <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-green-700">I'm just walking around.</span>
-                        <span class="text-sm text-gray-600">Só tô dando uma volta.</span>
+                <div class="success-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">✅</span>
+                        <span class="font-semibold text-green-700">"I'm fine, thank you!"</span>
                     </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim djâst uókin aráund</div>
                 </div>
-
-                <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-purple-700">Is this your first time here?</span>
-                        <span class="text-sm text-gray-600">É sua primeira vez aqui?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">iz dís iór fârst táim rríer?</div>
-                </div>
-
-                <div class="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-orange-700">I'm here on vacation.</span>
-                        <span class="text-sm text-gray-600">Tô de férias.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim rríer ón vêikêichân</div>
-                </div>
-
-                <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-red-700">I'm staying near the beach.</span>
-                        <span class="text-sm text-gray-600">Tô hospedado perto da praia.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim stêin niâr dâ bítch</div>
-                </div>
-
-                <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-yellow-700">What do you do?</span>
-                        <span class="text-sm text-gray-600">Você trabalha com o quê?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">uót du iú dú?</div>
-                </div>
-
-                <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-indigo-700">I'm a student.</span>
-                        <span class="text-sm text-gray-600">Sou estudante.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim a stúdânt</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mini-diálogo Chapter 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎭 Mini-diálogo
-            </h3>
-            <div class="space-y-4">
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Hi! How's your day going?</span>
+                
+                <div class="tip-box p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-2xl">⚠️</span>
+                        <div class="text-sky-700">
+                            <strong>"How do you do?" é uma pergunta formal, não uma resposta!</strong> Use "I'm fine" ou "I'm good" para responder "How are you?"
                         </div>
-                        <div class="text-sm text-gray-600 ml-3">Oi! Como tá seu dia?</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Pretty good. Just walking around.</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Tranquilo. Só tô dando uma volta.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Is this your first time here?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">É sua primeira vez aqui?</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Yes. I'm here on vacation.</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">É sim. Tô de férias.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Cool! Enjoy!</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Que massa! Aproveita!</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Flash Expressions Chapter 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                ⚡ Flash Expressions
-            </h3>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">Just chilling</div>
-                    <div class="text-sm opacity-90 mb-2">Tô só de boa / Relaxando</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">djâst tchílin</div>
+        <!-- Golden Tip -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">✅</div>
+                <h2 class="text-3xl font-bold text-gray-800">Dica de ouro</h2>
+            </div>
+            
+            <div class="tip-box p-6 rounded-xl">
+                <div class="mb-4">
+                    <div class="font-semibold text-sky-700 mb-2">Quer soar mais natural? Use esta sequência:</div>
                 </div>
-                <div class="bg-gradient-to-r from-green-400 to-teal-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">I'm not from here</div>
-                    <div class="text-sm opacity-90 mb-2">Não sou daqui</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">aim nót frôm rríer</div>
+                
+                <div class="bg-white p-4 rounded-lg border-2 border-sky-200 mb-4">
+                    <div class="font-bold text-lg text-sky-800 mb-2">"Hi! How's it going?"</div>
+                    <div class="text-gray-600 mb-2">Oi! Como vai?</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">Pronúncia: "rrai! rráuz it góuin?" <span class="text-xl">👄</span></div>
                 </div>
-                <div class="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">What brings you here?</div>
-                    <div class="text-sm opacity-90 mb-2">O que te trouxe por aqui?</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">uót bríngz iú rríer?</div>
+                
+                <div class="text-sky-700">
+                    <strong>É mais casual que "How are you?" e soa super natural!</strong>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Erro clássico Chapter 2 -->
-        <div class="bg-red-50 border border-red-200 rounded-xl p-6 card-hover">
-            <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
-                ❌ Erro clássico
-            </h3>
-            <div class="space-y-3">
-                <div class="bg-red-100 rounded-lg p-3 border-l-4 border-red-400">
-                    <span class="text-red-700 font-medium">❌ "I'm in vacation"</span>
-                </div>
-                <div class="bg-green-100 rounded-lg p-3 border-l-4 border-green-400">
-                    <span class="text-green-700 font-medium">✅ "I'm on vacation"</span>
-                </div>
-                <div class="bg-yellow-100 rounded-lg p-3 border-l-4 border-yellow-400">
-                    <span class="text-yellow-700">⚠️ Em inglês, usa-se "on" para férias – diferente do português!</span>
-                </div>
+        <!-- Pocket Summary -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎒</div>
+                <h2 class="text-3xl font-bold text-gray-800">Resumo de bolso</h2>
             </div>
-        </div>
-
-        <!-- Dica de ouro Chapter 2 -->
-        <div class="bg-gradient-to-r from-emerald-400 to-teal-600 rounded-xl p-6 text-white card-hover">
-            <h3 class="text-2xl font-bold mb-4 flex items-center">
-                ✅ Dica de ouro
-            </h3>
-            <div class="bg-white bg-opacity-20 rounded-lg p-4">
-                <p class="mb-3">Quer puxar papo sem parecer invasivo? Pergunte:</p>
-                <div class="bg-white bg-opacity-30 rounded-lg p-3 mb-2">
-                    <span class="font-bold text-lg">"Are you here on vacation or business?"</span>
-                </div>
-                <div class="text-sm opacity-90 mb-2">Você tá aqui de férias ou a trabalho?</div>
-                <div class="text-sm font-mono bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
-                    Pronúncia: "ár iú ríer ón vêikêichân ór bízness?"
-                </div>
-            </div>
-        </div>
-
-        <!-- Resumo de bolso Chapter 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎒 Resumo de bolso
-            </h3>
+            
             <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-blue-600">🗝️ 3 palavras-chave:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Vacation</strong> = Férias</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Trip</strong> = Viagem</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Weather</strong> = Tempo</li>
-                    </ul>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗝️</span>
+                            <span class="font-bold text-orange-700">3 palavras-chave:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700">
+                            <div><strong>Hi</strong> = Oi</div>
+                            <div><strong>How are you?</strong> = Como vai?</div>
+                            <div><strong>Thank you</strong> = Obrigado</div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-green-600">🗣️ 3 frases essenciais:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-green-50 rounded-lg p-2">"Is this your first time here?"</li>
-                        <li class="bg-green-50 rounded-lg p-2">"I'm just walking around."</li>
-                        <li class="bg-green-50 rounded-lg p-2">"What do you do?"</li>
-                    </ul>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗣️</span>
+                            <span class="font-bold text-green-700">3 frases essenciais:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700 text-sm">
+                            <div>"Hi! How's it going?"</div>
+                            <div>"I'm good, thanks!"</div>
+                            <div>"Nice to meet you!"</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="mt-6 bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                <p class="text-yellow-800">
-                    <strong>✅</strong> Use "Are you here on vacation or business?" para parecer sociável sem invadir o espaço do outro.
-                </p>
+            
+            <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+                <div class="flex items-start space-x-3">
+                    <span class="text-2xl">✅</span>
+                    <div class="text-blue-700">
+                        <strong>Sempre responda "How are you?" com "I'm fine/good, thanks!" e devolva a pergunta com "And you?"</strong>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8">
+            <a href="/guiadoviajante/index.html" class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold text-gray-700 transition-colors flex items-center space-x-2">
+                <span>←</span>
+                <span>Menu Principal</span>
+            </a>
+            
+            <div class="text-center">
+                <div class="text-sm text-gray-500 mb-1">Próximo capítulo</div>
+                <div class="font-semibold text-gray-700">Small Talk</div>
+            </div>
+            
+            <a href="/guiadoviajante/chapter2.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors flex items-center space-x-2">
+                <span>Capítulo 2</span>
+                <span>→</span>
+            </a>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="gradient-bg text-white py-6 mt-12">
+    <div class="gradient-bg text-white py-12 mt-16">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="text-lg opacity-90">Bons estudos e boa viagem! 🌟</p>
+            <div class="mb-6">
+                <div class="text-4xl mb-4">👋</div>
+                <h3 class="text-2xl font-bold mb-2">Parabéns!</h3>
+                <p class="text-lg opacity-90">Você completou o Capítulo 1. Agora você sabe cumprimentar em inglês!</p>
+            </div>
+            <div class="text-sm opacity-70">
+                <p>Continue praticando e boa sorte na sua viagem! 🌟</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        function showChapter(chapterNumber) {
-            // Hide all chapters
-            document.getElementById('chapter1-content').style.display = 'none';
-            document.getElementById('chapter2-content').style.display = 'none';
-            
-            // Remove active state from all buttons
-            document.getElementById('chapter1-btn').classList.remove('bg-white', 'bg-opacity-40', 'font-bold');
-            document.getElementById('chapter2-btn').classList.remove('bg-white', 'bg-opacity-40', 'font-bold');
-            
-            // Show selected chapter and update button state
-            if (chapterNumber === 1) {
-                document.getElementById('chapter1-content').style.display = 'block';
-                document.getElementById('chapter1-btn').classList.add('bg-white', 'bg-opacity-40', 'font-bold');
-                document.getElementById('chapter-description').innerHTML = '<p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>';
-            } else if (chapterNumber === 2) {
-                document.getElementById('chapter2-content').style.display = 'block';
-                document.getElementById('chapter2-btn').classList.add('bg-white', 'bg-opacity-40', 'font-bold');
-                document.getElementById('chapter-description').innerHTML = '<p class="text-lg opacity-90">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>';
-            }
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        // Initialize with Chapter 1
-        document.addEventListener('DOMContentLoaded', function() {
-            showChapter(1);
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0bc2c83735680',t:'MTc1NzM1ODUxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c10879e0145680',t:'MTc1NzM2MTYzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
