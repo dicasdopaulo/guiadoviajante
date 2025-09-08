@@ -342,60 +342,8 @@
 
     <script>
         function goToChapter(chapterNumber) {
-            // Simula navegação para as páginas dos capítulos
-            // Na implementação real, você redirecionaria para chapter1.html, chapter2.html, etc.
-            
-            if (chapterNumber === 1 || chapterNumber === 2) {
-                // Para os capítulos que já existem, mostra o conteúdo
-                showExistingChapter(chapterNumber);
-            } else {
-                // Para os outros capítulos, mostra uma mensagem
-                alert(`Capítulo ${chapterNumber} em desenvolvimento! 🚧\n\nEm breve você terá acesso a todo o conteúdo.`);
-            }
-        }
-
-        function showExistingChapter(chapterNumber) {
-            // Esconde a página inicial e mostra o conteúdo do capítulo
-            document.body.innerHTML = getChapterContent(chapterNumber);
-        }
-
-        function getChapterContent(chapterNumber) {
-            // Aqui você retornaria o HTML do capítulo específico
-            // Por enquanto, vou redirecionar para uma versão simplificada
-            
-            if (chapterNumber === 1) {
-                return `
-                <div class="gradient-bg text-white py-8">
-                    <div class="max-w-4xl mx-auto px-6">
-                        <button onclick="location.reload()" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg mb-4">← Voltar ao Início</button>
-                        <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
-                        <h2 class="text-2xl font-medium mb-4">Chapter 1 – Greetings & Introducing Yourself</h2>
-                        <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
-                    </div>
-                </div>
-                <div class="max-w-4xl mx-auto px-6 py-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <h3 class="text-2xl font-bold mb-4">Conteúdo do Capítulo 1</h3>
-                        <p class="text-gray-600">Este é o conteúdo completo do Capítulo 1 que você já criou anteriormente...</p>
-                    </div>
-                </div>`;
-            } else if (chapterNumber === 2) {
-                return `
-                <div class="gradient-bg text-white py-8">
-                    <div class="max-w-4xl mx-auto px-6">
-                        <button onclick="location.reload()" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg mb-4">← Voltar ao Início</button>
-                        <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
-                        <h2 class="text-2xl font-medium mb-4">Chapter 2 – Small Talk</h2>
-                        <p class="text-lg opacity-90">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>
-                    </div>
-                </div>
-                <div class="max-w-4xl mx-auto px-6 py-8">
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <h3 class="text-2xl font-bold mb-4">Conteúdo do Capítulo 2</h3>
-                        <p class="text-gray-600">Este é o conteúdo completo do Capítulo 2 que você já criou anteriormente...</p>
-                    </div>
-                </div>`;
-            }
+            // Redireciona para a página do capítulo específico
+            window.location.href = `/chapter${chapterNumber}.html`;
         }
 
         // Adiciona efeito de hover nos cards
@@ -411,5 +359,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0c6a135635680',t:'MTc1NzM1ODk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0d7e961fb5680',t:'MTc1NzM1OTY0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
