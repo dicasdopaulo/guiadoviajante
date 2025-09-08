@@ -6,327 +6,410 @@
     <title>Guia de Viagem - Inglês Básico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .pronunciation { background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%); }
-        .audio-btn { transition: all 0.2s ease; }
-        .audio-btn:hover { transform: scale(1.1); }
-        .section-card { backdrop-filter: blur(10px); }
+        .card-hover { 
+            transition: all 0.3s ease; 
+            cursor: pointer;
+        }
+        .card-hover:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+        }
+        .chapter-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .chapter-number {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .hero-text {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .grid-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <!-- Header -->
-    <div class="gradient-bg text-white py-8">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
-            <h2 class="text-2xl font-medium mb-4">Chapter 1 – Greetings & Introducing Yourself</h2>
-            <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white relative overflow-hidden">
+        <div class="grid-pattern absolute inset-0"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center">
+                <div class="floating-element mb-8">
+                    <div class="text-8xl mb-4">🌍</div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 hero-text">
+                    Guia de Viagem
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-medium mb-6 opacity-90">
+                    Inglês Básico para Sobreviver no Exterior
+                </h2>
+                <p class="text-lg md:text-xl opacity-80 max-w-3xl mx-auto leading-relaxed">
+                    15 capítulos essenciais para você se virar em qualquer país de língua inglesa. 
+                    Do aeroporto ao restaurante, sem travar na hora H!
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-2 text-sm font-medium">
+                        ✈️ Prático
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-2 text-sm font-medium">
+                        🗣️ Com Pronúncia
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-full px-6 py-2 text-sm font-medium">
+                        🎯 Direto ao Ponto
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="max-w-4xl mx-auto px-6 py-8 space-y-8">
-        <!-- Palavras-chave -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                📌 Palavras-chave
-            </h3>
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b-2 border-gray-200">
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇺🇸 Inglês</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🇧🇷 Equivalência</th>
-                            <th class="text-left py-3 px-2 font-semibold text-gray-700">🗣️ Pronúncia</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hello</td>
-                            <td class="py-3 px-2">Oi / Olá</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrélôu</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hi</td>
-                            <td class="py-3 px-2">Oi (mais informal)</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrái</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Hey</td>
-                            <td class="py-3 px-2">E aí / Opa!</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">rrêi</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good morning</td>
-                            <td class="py-3 px-2">Bom dia</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud mórnin</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good afternoon</td>
-                            <td class="py-3 px-2">Boa tarde</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud afternún</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Good evening</td>
-                            <td class="py-3 px-2">Boa noite (ao chegar)</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gud ívnin</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Goodbye</td>
-                            <td class="py-3 px-2">Tchau</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">gudbái</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">See you</td>
-                            <td class="py-3 px-2">Até mais</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">sí iú</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Take care</td>
-                            <td class="py-3 px-2">Se cuida</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">teik kér</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">What's your name?</td>
-                            <td class="py-3 px-2">Qual é o seu nome?</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">uótch iór neim?</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">My name is…</td>
-                            <td class="py-3 px-2">Meu nome é…</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">mai neim iz...</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-2 font-medium text-blue-600">Nice to meet you</td>
-                            <td class="py-3 px-2">Prazer em te conhecer</td>
-                            <td class="py-3 px-2 pronunciation rounded-lg px-3 py-1 text-sm font-mono">náiss tchu mítiú</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Chapters Grid -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Escolha seu Capítulo</h3>
+            <p class="text-lg text-gray-600">Clique em qualquer capítulo para começar a estudar</p>
         </div>
 
-        <!-- Expressões úteis -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🗣️ Expressões úteis
-            </h3>
-            <div class="space-y-4">
-                <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-blue-700">How are you?</span>
-                        <span class="text-sm text-gray-600">Tudo bem? / Como vai?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">rráu ar iú?</div>
-                </div>
-                
-                <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-green-700">"I'm fine, thanks."</span>
-                        <span class="text-sm text-gray-600">"Tô bem, valeu."</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim fáin, tênks</div>
-                </div>
-
-                <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-purple-700">And you?</span>
-                        <span class="text-sm text-gray-600">E você?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">ênd iú?</div>
-                </div>
-
-                <div class="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-orange-700">Where are you from?</span>
-                        <span class="text-sm text-gray-600">De onde você é?</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">uéar ar iú fróm?</div>
-                </div>
-
-                <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-red-700">I'm from Brazil.</span>
-                        <span class="text-sm text-gray-600">Sou do Brasil.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">aim frôm brazíl</div>
-                </div>
-
-                <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                    <div class="flex justify-between items-start mb-2">
-                        <span class="font-semibold text-yellow-700">I speak a little English.</span>
-                        <span class="text-sm text-gray-600">Eu falo um pouco de inglês.</span>
-                    </div>
-                    <div class="pronunciation rounded-lg px-3 py-1 text-sm font-mono inline-block">ai spík a lírôu inglish</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mini-diálogo -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎭 Mini-diálogo
-            </h3>
-            <div class="space-y-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Chapter 1 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(1)">
                 <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Hi! What's your name?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Oi! Qual seu nome?</div>
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        1
                     </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
                     <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">My name is Ana. And you?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Meu nome é Ana. E o seu?</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">Nice to meet you!</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Prazer!</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Nice to meet you too. Where are you from?</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Prazer também. De onde você é?</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-blue-100 rounded-full p-2">👤</div>
-                    <div class="flex-1">
-                        <div class="bg-blue-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-blue-800">I'm from Brazil.</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Sou do Brasil.</div>
-                    </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                    <div class="bg-green-100 rounded-full p-2">🧍</div>
-                    <div class="flex-1">
-                        <div class="bg-green-50 rounded-lg p-3 mb-1">
-                            <span class="font-medium text-green-800">Cool!</span>
-                        </div>
-                        <div class="text-sm text-gray-600 ml-3">Que legal!</div>
+                        <div class="text-2xl mb-2">👋</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Greetings & Introducing Yourself</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Cumprimentos e como se apresentar sem travar logo de cara</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Flash Expressions -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                ⚡ Flash Expressions
-            </h3>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">What's up?</div>
-                    <div class="text-sm opacity-90 mb-2">E aí?</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">uótz âp?</div>
+            <!-- Chapter 2 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(2)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        2
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">💬</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Small Talk</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>
+                    </div>
                 </div>
-                <div class="bg-gradient-to-r from-pink-400 to-red-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">How's it going?</div>
-                    <div class="text-sm opacity-90 mb-2">Como estão as coisas?</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">rráuz it góuin?</div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(3)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        3
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🛂</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Passport & Documents</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Passaporte e documentos: sem gaguejar na hora de mostrar o que precisa</p>
+                    </div>
                 </div>
-                <div class="bg-gradient-to-r from-purple-400 to-indigo-500 rounded-lg p-4 text-white">
-                    <div class="font-bold mb-2">It's nice to see you!</div>
-                    <div class="text-sm opacity-90 mb-2">Que bom te ver!</div>
-                    <div class="text-xs bg-white bg-opacity-20 rounded px-2 py-1 font-mono">its náiss tchú sí iú</div>
+            </div>
+
+            <!-- Chapter 4 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(4)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        4
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">✈️</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">At the Airport, Immigration & Customs</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">No aeroporto, passando pela imigração e pela alfândega – sem perrengue!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 5 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(5)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        5
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🚖</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Taxi & Ride Apps</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Pegando táxi ou chamando Uber sem pagar mico</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 6 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(6)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        6
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🚇</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Subway & Public Transport</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Usando metrô, ônibus e trem como um nativo esperto</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 7 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(7)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        7
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🏨</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Hotel, Hostel & Airbnb</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Reservando, fazendo check-in e se virando na hospedagem</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 8 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(8)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        8
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🚗</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Renting a Car</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Alugando um carro e se virando no volante fora do Brasil</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 9 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(9)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        9
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🍽️</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">At the Restaurant</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">No restaurante: pedindo comida sem virar meme internacional</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 10 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(10)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        10
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🛍️</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Shopping & Buying Things</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Comprando sem drama: roupas, lembrancinhas ou eletrônicos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 11 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(11)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        11
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🚑</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Emergencies & Health</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Emergências e saúde: pra se cuidar sem depender de mímica!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 12 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(12)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        12
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🧭</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Asking for Help & Directions</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Pedindo ajuda ou informação sem se perder (nem passar nervoso)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 13 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(13)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        13
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🧳</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Common Problems While Traveling</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Perrengues clássicos de viagem — e como se virar quando tudo dá errado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 14 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(14)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        14
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">🗣️</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Basic Conversation Starters (Casual)</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Iniciando conversas com leveza (sem ser o chato do rolê)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 15 -->
+            <div class="chapter-card rounded-xl p-6 card-hover" onclick="goToChapter(15)">
+                <div class="flex items-start space-x-4">
+                    <div class="chapter-number text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                        15
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-2xl mb-2">📱</div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Social Media & Digital Survival</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Wi-Fi, Instagram, QR Code... sobrevivendo online sem travar (nem o inglês!)</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Erro clássico -->
-        <div class="bg-red-50 border border-red-200 rounded-xl p-6 card-hover">
-            <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
-                ❌ Erro clássico
-            </h3>
-            <div class="space-y-3">
-                <div class="bg-red-100 rounded-lg p-3 border-l-4 border-red-400">
-                    <span class="text-red-700 font-medium">❌ "I'm call Ana."</span>
-                </div>
-                <div class="bg-green-100 rounded-lg p-3 border-l-4 border-green-400">
-                    <span class="text-green-700 font-medium">✅ "My name is Ana" ou "I'm Ana"</span>
-                </div>
-                <div class="bg-yellow-100 rounded-lg p-3 border-l-4 border-yellow-400">
-                    <span class="text-yellow-700">⚠️ "Call" significa "chamar", então soa errado nessa situação.</span>
-                </div>
+    <!-- Features Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Por que este guia funciona?</h3>
             </div>
-        </div>
-
-        <!-- Dica de ouro -->
-        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-xl p-6 text-white card-hover">
-            <h3 class="text-2xl font-bold mb-4 flex items-center">
-                ✅ Dica de ouro
-            </h3>
-            <div class="bg-white bg-opacity-20 rounded-lg p-4">
-                <p class="mb-3">Se travar ou não entender algo, diga:</p>
-                <div class="bg-white bg-opacity-30 rounded-lg p-3 mb-2">
-                    <span class="font-bold text-lg">"Sorry, can you repeat that?"</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Situações Reais</h4>
+                    <p class="text-gray-600">Frases que você realmente vai usar, não decoreba de escola</p>
                 </div>
-                <div class="text-sm opacity-90 mb-2">Desculpa, você pode repetir?</div>
-                <div class="text-sm font-mono bg-white bg-opacity-20 rounded px-2 py-1 inline-block">
-                    Pronúncia: "sóri, kén iú ripít dét?"
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🗣️</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Pronúncia Brasileira</h4>
+                    <p class="text-gray-600">Escrita de um jeito que você consegue falar de verdade</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Resumo de bolso -->
-        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                🎒 Resumo de bolso
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-blue-600">🗝️ 3 palavras-chave:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Hi</strong> = Oi</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Goodbye</strong> = Tchau</li>
-                        <li class="bg-blue-50 rounded-lg p-2"><strong>Name</strong> = Nome</li>
-                    </ul>
+                <div class="text-center">
+                    <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Rápido e Prático</h4>
+                    <p class="text-gray-600">Sem enrolação. Direto ao que importa para sua viagem</p>
                 </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-3 text-green-600">🗣️ 3 frases essenciais:</h4>
-                    <ul class="space-y-2">
-                        <li class="bg-green-50 rounded-lg p-2">"Hi! What's your name?"</li>
-                        <li class="bg-green-50 rounded-lg p-2">"I'm from Brazil."</li>
-                        <li class="bg-green-50 rounded-lg p-2">"Nice to meet you!"</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-6 bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
-                <p class="text-yellow-800">
-                    <strong>✅</strong> Use "Sorry, can you repeat that?" quando não entender — funciona em qualquer situação!
-                </p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="gradient-bg text-white py-6 mt-12">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="text-lg opacity-90">Bons estudos e boa viagem! 🌟</p>
+    <div class="gradient-bg text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="text-4xl mb-4">✈️</div>
+                <h3 class="text-2xl font-bold mb-2">Pronto para a aventura?</h3>
+                <p class="text-lg opacity-90">Escolha um capítulo e comece a se preparar para sua viagem!</p>
+            </div>
+            <div class="text-sm opacity-70">
+                <p>Bons estudos e boa viagem! 🌟</p>
+            </div>
         </div>
     </div>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c09396e36e5680',t:'MTc1NzM1Njg1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <script>
+        function goToChapter(chapterNumber) {
+            // Simula navegação para as páginas dos capítulos
+            // Na implementação real, você redirecionaria para chapter1.html, chapter2.html, etc.
+            
+            if (chapterNumber === 1 || chapterNumber === 2) {
+                // Para os capítulos que já existem, mostra o conteúdo
+                showExistingChapter(chapterNumber);
+            } else {
+                // Para os outros capítulos, mostra uma mensagem
+                alert(`Capítulo ${chapterNumber} em desenvolvimento! 🚧\n\nEm breve você terá acesso a todo o conteúdo.`);
+            }
+        }
+
+        function showExistingChapter(chapterNumber) {
+            // Esconde a página inicial e mostra o conteúdo do capítulo
+            document.body.innerHTML = getChapterContent(chapterNumber);
+        }
+
+        function getChapterContent(chapterNumber) {
+            // Aqui você retornaria o HTML do capítulo específico
+            // Por enquanto, vou redirecionar para uma versão simplificada
+            
+            if (chapterNumber === 1) {
+                return `
+                <div class="gradient-bg text-white py-8">
+                    <div class="max-w-4xl mx-auto px-6">
+                        <button onclick="location.reload()" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg mb-4">← Voltar ao Início</button>
+                        <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
+                        <h2 class="text-2xl font-medium mb-4">Chapter 1 – Greetings & Introducing Yourself</h2>
+                        <p class="text-lg opacity-90">Cumprimentos e como se apresentar sem travar logo de cara</p>
+                    </div>
+                </div>
+                <div class="max-w-4xl mx-auto px-6 py-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4">Conteúdo do Capítulo 1</h3>
+                        <p class="text-gray-600">Este é o conteúdo completo do Capítulo 1 que você já criou anteriormente...</p>
+                    </div>
+                </div>`;
+            } else if (chapterNumber === 2) {
+                return `
+                <div class="gradient-bg text-white py-8">
+                    <div class="max-w-4xl mx-auto px-6">
+                        <button onclick="location.reload()" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg mb-4">← Voltar ao Início</button>
+                        <h1 class="text-4xl font-bold mb-2">🌍 Guia de Viagem</h1>
+                        <h2 class="text-2xl font-medium mb-4">Chapter 2 – Small Talk</h2>
+                        <p class="text-lg opacity-90">Papo furado, mas essencial pra puxar conversa e parecer simpático</p>
+                    </div>
+                </div>
+                <div class="max-w-4xl mx-auto px-6 py-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4">Conteúdo do Capítulo 2</h3>
+                        <p class="text-gray-600">Este é o conteúdo completo do Capítulo 2 que você já criou anteriormente...</p>
+                    </div>
+                </div>`;
+            }
+        }
+
+        // Adiciona efeito de hover nos cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c0c6a135635680',t:'MTc1NzM1ODk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
