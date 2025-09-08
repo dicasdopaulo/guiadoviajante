@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 - Subway & Public Transport | Guia de Viagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .pronunciation-text { 
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .english-text {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        .portuguese-text {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .dialogue-person1 {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 4px solid #6366f1;
+        }
+        .dialogue-person2 {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        .error-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #ef4444;
+        }
+        .success-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .icon-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-8px); }
+            70% { transform: translateY(-4px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-between mb-6">
+                <a href="/guiadoviajante/index.html" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2">
+                    <span>←</span>
+                    <span>Voltar ao Início</span>
+                </a>
+                <div class="text-right">
+                    <div class="text-sm opacity-75">Capítulo</div>
+                    <div class="text-2xl font-bold">6/15</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="floating-element mb-6">
+                    <div class="text-6xl mb-4">🚇</div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Chapter 6 – Subway & Public Transport</h1>
+                <p class="text-xl md:text-2xl opacity-90 mb-6">Usando metrô, ônibus e trem como um nativo esperto</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+        
+        <!-- Keywords Section -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">📌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Palavras-chave</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇺🇸 Inglês</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🇧🇷 Equivalência natural</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">🗣️ Pronúncia (BR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="space-y-2">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Subway</td>
+                            <td class="py-3 px-4">Metrô</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"sâbuêi"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Train</td>
+                            <td class="py-3 px-4">Trem</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"tréin"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Bus</td>
+                            <td class="py-3 px-4">Ônibus</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"bâs"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Station</td>
+                            <td class="py-3 px-4">Estação</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"stêichân"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Platform</td>
+                            <td class="py-3 px-4">Plataforma</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"plétfórm"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Ticket / Pass</td>
+                            <td class="py-3 px-4">Bilhete / Cartão de transporte</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"tíkêt / pés"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Fare</td>
+                            <td class="py-3 px-4">Tarifa</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"fér"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Line / Route</td>
+                            <td class="py-3 px-4">Linha / Rota</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"láin / rút"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Timetable / Schedule</td>
+                            <td class="py-3 px-4">Horário / Tabela de horários</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"táimtéibôl / skédjul"</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Map</td>
+                            <td class="py-3 px-4">Mapa</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"mép"</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4 font-medium text-blue-600">Direction</td>
+                            <td class="py-3 px-4">Sentido / Direção</td>
+                            <td class="py-3 px-4 pronunciation-text rounded px-3 py-1 font-mono">"dirékchân"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Useful Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🗣️</div>
+                <h2 class="text-3xl font-bold text-gray-800">Expressões úteis</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Where can I buy a subway ticket?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Onde eu compro o bilhete do metrô?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uéar kén ai bái â sâbuêi tíkêt?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Which line goes to downtown?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Qual linha vai pro centro?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"uítch láin gôuz tu dáuntáun?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">I need to get off at the next station.</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Tenho que descer na próxima estação.</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"ai níd tchú guéróf ét dâ nékst stêichân"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Does this bus go to the airport?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Esse ônibus vai pro aeroporto?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"dâz dís bâs gôu tu dâ érport?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">How much is a single ride?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">Quanto custa uma passagem?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"rráu mâtch iz â síngôl ráid?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="english-text p-3 rounded-lg">
+                        <div class="font-semibold text-blue-700">Is it far from here?</div>
+                    </div>
+                    <div class="portuguese-text p-3 rounded-lg">
+                        <div class="text-green-700">É longe daqui?</div>
+                    </div>
+                    <div class="pronunciation-text p-3 rounded-lg">
+                        <div class="font-mono text-amber-700">"iz it fár frâm rrír?"</div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="text-2xl">👄</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Dialogue -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎭</div>
+                <h2 class="text-3xl font-bold text-gray-800">Mini-diálogo – Estação de metrô</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Excuse me, does this train go to Times Square? <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Com licença, esse trem vai pra Times Square?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person2 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-amber-700 mb-1">Yes, but you need to transfer at the next station. <span class="text-xl">🎧</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Vai sim, mas você tem que trocar de linha na próxima estação.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dialogue-person1 p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-2xl">👤</div>
+                        <div>
+                            <div class="font-semibold text-indigo-700 mb-1">Got it. Thanks! <span class="text-xl">👄</span></div>
+                            <div class="text-gray-600 flex items-center space-x-2">
+                                <span>🧍</span>
+                                <span>Entendi. Valeu!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Expressions -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4 icon-bounce">⚡</div>
+                <h2 class="text-3xl font-bold text-gray-800">Flash Expressions</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200">
+                    <div class="font-semibold text-purple-700 mb-2">Next stop <span class="text-xl">🎧</span></div>
+                    <div class="text-gray-600 mb-2">Próxima parada</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"nékst stóp"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+                    <div class="font-semibold text-blue-700 mb-2">Mind the gap <span class="text-xl">🎧</span><span class="text-xl">🚨</span></div>
+                    <div class="text-gray-600 mb-2">Cuidado com o vão (do trem/plataforma)</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"máind dâ guép"</div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 md:col-span-2">
+                    <div class="font-semibold text-red-700 mb-2">Out of service <span class="text-xl">🎧</span><span class="text-xl">🚨</span></div>
+                    <div class="text-gray-600 mb-2">Fora de serviço</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">"áut óv sârviss"</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Error -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">❌</div>
+                <h2 class="text-3xl font-bold text-gray-800">Erro clássico</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="error-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">❌</span>
+                        <span class="font-semibold text-red-700">"Where is the subway car?"</span>
+                    </div>
+                </div>
+                
+                <div class="success-box p-4 rounded-xl">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <span class="text-2xl">✅</span>
+                        <span class="font-semibold text-green-700">"Where is the train?" ou "Where is the platform?"</span>
+                    </div>
+                </div>
+                
+                <div class="tip-box p-4 rounded-xl">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-2xl">⚠️</span>
+                        <div class="text-sky-700">
+                            <strong>"Car" pode confundir — eles usam "train" ou "platform".</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Tip -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">✅</div>
+                <h2 class="text-3xl font-bold text-gray-800">Dica de ouro</h2>
+            </div>
+            
+            <div class="tip-box p-6 rounded-xl">
+                <div class="mb-4">
+                    <div class="font-semibold text-sky-700 mb-2">Vai trocar de linha no metrô? Diga:</div>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg border-2 border-sky-200 mb-4">
+                    <div class="font-bold text-lg text-sky-800 mb-2">"I need to transfer to the blue line."</div>
+                    <div class="text-gray-600 mb-2">Preciso trocar pra linha azul.</div>
+                    <div class="pronunciation-text p-2 rounded font-mono text-sm">Pronúncia: "ai níd tchú trânsfâr tchú dâ blú láin" <span class="text-xl">👄</span><span class="text-xl">✅</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pocket Summary -->
+        <section class="card-shadow bg-white rounded-2xl p-8 hover-scale">
+            <div class="flex items-center mb-6">
+                <div class="text-3xl mr-4">🎒</div>
+                <h2 class="text-3xl font-bold text-gray-800">Resumo de bolso</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗝️</span>
+                            <span class="font-bold text-orange-700">3 palavras-chave:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700">
+                            <div><strong>Subway</strong> = Metrô</div>
+                            <div><strong>Fare</strong> = Tarifa</div>
+                            <div><strong>Line</strong> = Linha</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-2xl">🗣️</span>
+                            <span class="font-bold text-green-700">3 frases essenciais:</span>
+                        </div>
+                        <div class="space-y-1 text-gray-700 text-sm">
+                            <div>"Does this train go to the airport?"</div>
+                            <div>"How much is a single ride?"</div>
+                            <div>"I need to get off at the next station."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+                <div class="flex items-start space-x-3">
+                    <span class="text-2xl">✅</span>
+                    <div class="text-blue-700">
+                        <strong>Fique atento a placas com "Out of service" ou "Transfer here" — são sinais importantes no transporte público!</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8">
+            <a href="/guiadoviajante/chapter5.html" class="bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold text-gray-700 transition-colors flex items-center space-x-2">
+                <span>←</span>
+                <span>Capítulo 5</span>
+            </a>
+            
+            <div class="text-center">
+                <div class="text-sm text-gray-500 mb-1">Próximo capítulo</div>
+                <div class="font-semibold text-gray-700">Hotel Check-in</div>
+            </div>
+            
+            <a href="/guiadoviajante/chapter7.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors flex items-center space-x-2">
+                <span>Capítulo 7</span>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="gradient-bg text-white py-12 mt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <div class="text-4xl mb-4">🚇</div>
+                <h3 class="text-2xl font-bold mb-2">Parabéns!</h3>
+                <p class="text-lg opacity-90">Você completou o Capítulo 6. Agora você sabe usar transporte público em inglês!</p>
+            </div>
+            <div class="text-sm opacity-70">
+                <p>Continue praticando e boa sorte na sua viagem! 🌟</p>
+            </div>
+        </div>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c12ee123e95680',t:'MTc1NzM2MzIxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
